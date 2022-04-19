@@ -22,4 +22,4 @@ jobs:
           check-latest: true
 
       - name: Run CI 👨🏻‍💻
-        run: yarn && yarn lint:eslint --fix && yarn build
+        run: yarn && yarn lint && yarn build

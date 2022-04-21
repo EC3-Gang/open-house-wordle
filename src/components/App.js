@@ -1,49 +1,18 @@
 import './App.css';
-import React, { Component } from 'react';
-import keyCodes from '../keyCodes';
+import React, { Component, Suspense } from 'react';
+const Game = React.lazy(() => import('./Game'));
+import placeList from '../placeList';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			guess: '',
+			chosenPlace: placeList[Math.floor(Math.random() * placeList.length)],
 		};
 	}
 
-	handlekeydown = async (event) => {
-		const keycode = event.keyCode || event.charCode;
-		console.log(keycode);
-		if (keycode === 13) {
-			// nothing for now
-		}
-		else if (keycode === 8) {
-			// backspace this.state.guess
-			if (!this.state.guess.length) {
-				return;
-			}
-			await this.setState({
-				guess: this.state.guess.slice(0, -1),
-			});
-		}
-		else if (keyCodes[keycode] !== undefined) {
-			if (keyCodes[keycode] === '[SPACE]') {
-				await this.setState({
-					guess: this.state.guess + ' ',
-				});
-			}
-			else {
-				const val = keyCodes[keycode + ''];
-				this.setState({
-					guess: this.state.guess + val,
-				});
-			}
-		}
-	};
-
 	componentDidMount = () => {
 		console.log('Mounted');
-
-		window.onkeydown = this.handlekeydown;
 	};
 
 	render() {
@@ -51,7 +20,9 @@ class App extends Component {
 			<>
 				<h1 className='center'>HCI Open House Worldle</h1>
 				<div className='center'>
-					{this.state.guess}
+					<Suspense>
+						<Game place={this.state.chosenPlace} />
+					</Suspense>
 				</div>
 			</>
 		);

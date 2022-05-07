@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/781.8bc35812.chunk.css","mappings":"AAAA,QACC,iBACD,CAGA,WACC,eACD","sources":["components/App.css"],"sourcesContent":[".center {\n\ttext-align: center;\n}\n\n\n.toppadded {\n\tmargin-top: 20px;\n}"],"names":[],"sourceRoot":""}

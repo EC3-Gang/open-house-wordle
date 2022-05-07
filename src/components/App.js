@@ -17,14 +17,14 @@ class App extends Component {
 
 	render() {
 		return (
-			<>
-				<h1 className='center'>HCI Open House Worldle</h1>
+			<div className='toppadded'>
+				<h1 className='center'>Worldle (HCI Edition)</h1>
 				<div className='center'>
 					<Suspense>
 						<Game place={this.state.chosenPlace} />
 					</Suspense>
 				</div>
-			</>
+			</div>
 		);
 	}
 }

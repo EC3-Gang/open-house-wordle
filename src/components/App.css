@@ -1,3 +1,8 @@
 .center {
 	text-align: center;
 }
+
+
+.toppadded {
+	margin-top: 20px;
+}

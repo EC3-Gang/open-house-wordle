@@ -5,10 +5,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-	background-color: rgb(0, 1, 65);
-	color: white;
-	padding: 20px 100px 20px 100px;
+	padding: 30px 100px;
 }

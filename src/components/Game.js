@@ -2,7 +2,7 @@ import './Game.css';
 import React, { Component } from 'react';
 import placeList from '../placeList';
 import PropTypes from 'prop-types';
-import { Container, Button, Dropdown, Table, Icon, Tab } from 'semantic-ui-react';
+import { Container, Button, Dropdown, Table, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import places from '../placeList';
 

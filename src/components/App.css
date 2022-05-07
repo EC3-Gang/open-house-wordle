@@ -10,6 +10,10 @@ p, li {
 	margin-top: 20px;
 }
 
+button {
+	cursor: pointer;
+}
+
 .help {
 	position: fixed;
 	bottom: 10px;

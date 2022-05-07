@@ -41,10 +41,7 @@ class App extends Component {
 							<li>Tey Yixiang (1i2)</li>
 							<li>Liang Weiyu (1A3)</li>
 						</ul>
-						<p>Liason Officer:</p>
-						<ul>
-							<li>Darren Yap (1A3)</li>
-						</ul>
+						<p>MIT Licensed | Copyright &copy; 2022-Present HCI EC<sup>3</sup> &amp; everyone mentioned above</p>
 					`,
 					confirmButtonText: 'Return to game',
 				});

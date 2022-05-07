@@ -2,6 +2,7 @@
   "name": "open-house-wordle",
   "version": "0.1.0",
   "private": true,
+	"license": "MIT",
   "dependencies": {
     "@semantic-ui-react/css-patch": "^1.0.0",
     "@testing-library/jest-dom": "^5.14.1",

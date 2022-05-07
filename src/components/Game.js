@@ -5,17 +5,28 @@ import PropTypes from 'prop-types';
 import { Container, Button, Dropdown, Table, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import places from '../placeList';
+import haversine from '../haversine';
 
 export default class Game extends Component {
 	constructor(props) {
 		super(props);
 		this.places = places;
+		this.correctAns = this.props.place.text;
 		this.state = {
 			guess: '',
 			placeList,
 			guesses: [],
 		};
 	}
+
+	componentDidMount = () => {
+		console.log('Game component loaded');
+	};
+
+	handleGuess = () => {
+		const guess = this.state.guess;
+	};
+
 	render() {
 		return (
 			<Container style={{
@@ -24,8 +35,12 @@ export default class Game extends Component {
 				<h2 className='center'>Guess this place:</h2>
 				<div className='center'>
 					<iframe src={this.props.place.url} />
-					<Dropdown placeholder='Guess a place' fluid search selection options={this.places} />
-					<Button className='center toppadded' color='blue' fluid>
+					<Dropdown
+						placeholder='Guess a place'
+						fluid search selection options={this.places}
+						onChange={(e) => this.setState({ guess: e.target.innerHTML })}
+					/>
+					<Button className='center toppadded' color='blue' fluid onClick={this.handleGuess}>
 						<img alt="🌍"
 							src="https://twemoji.maxcdn.com/2/72x72/1f30d.png"
 							className="globe"

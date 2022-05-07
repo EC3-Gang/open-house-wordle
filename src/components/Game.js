@@ -6,12 +6,12 @@ import { Container, Button, Dropdown, Table, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import places from '../placeList';
 import haversine from '../haversine';
+import Swal from 'sweetalert2';
 
 export default class Game extends Component {
 	constructor(props) {
 		super(props);
 		this.places = places;
-		this.correctAns = this.props.place.text;
 		this.state = {
 			guess: '',
 			placeList,
@@ -25,6 +25,56 @@ export default class Game extends Component {
 
 	handleGuess = () => {
 		const guess = this.state.guess;
+		const prevGuesses = this.state.guesses;
+		const correctPlace = this.props.place;
+		let newGuesses;
+
+		if (guess === correctPlace.text) {
+			newGuesses = [...prevGuesses, { guess, correct: '<i class=\'icon checkmark green\' />', distance: '0m' }];
+			Swal.fire({
+				titleText: 'Congratulations!',
+				html: `
+					<p>You guessed the place correctly!</p>
+				`,
+				icon: 'success',
+				confirmButtonText: 'Play Again',
+			}).then(({ isConfirmed }) => {
+				if (isConfirmed) location.reload();
+			});
+		}
+		else if (guess !== correctPlace.text) {
+			// eslint-disable-next-line no-shadow
+			const place = places.find(place => place.text === guess);
+			const distance = Math.round(haversine(
+				[correctPlace.lat, correctPlace.long],
+				[place.lat, place.long],
+			) * 1000);
+			newGuesses = [...prevGuesses, { guess, correct: '<i class=\'icon x red\' />', distance: `${distance}m` }];
+			if (newGuesses.length >= 4) {
+				Swal.fire({
+					titleText: 'Oops...',
+					html: `
+						<p>You guessed the place incorrectly!</p>
+						<p>The correct place is ${correctPlace.text}</p>
+					`,
+					icon: 'error',
+					confirmButtonText: 'Play Again',
+				}).then(({ isConfirmed }) => {
+					if (isConfirmed) location.reload();
+				});
+			}
+			else {
+				Swal.fire({
+					titleText: 'Oops...',
+					html: `
+						<p>You guessed the place incorrectly!</p>
+					`,
+					icon: 'error',
+					confirmButtonText: 'Try Again',
+				});
+			}
+		}
+		this.setState({ guesses: newGuesses });
 	};
 
 	render() {
@@ -38,7 +88,9 @@ export default class Game extends Component {
 					<Dropdown
 						placeholder='Guess a place'
 						fluid search selection options={this.places}
-						onChange={(e) => this.setState({ guess: e.target.innerHTML })}
+						onChange={(e) => {
+							this.setState({ guess: e.target.innerText });
+						}}
 					/>
 					<Button className='center toppadded' color='blue' fluid onClick={this.handleGuess}>
 						<img alt="🌍"
@@ -61,7 +113,7 @@ export default class Game extends Component {
 									return (
 										<Table.Row key={guess.guess}>
 											<Table.Cell>{guess.guess}</Table.Cell>
-											<Table.Cell>{guess.correct}</Table.Cell>
+											<Table.Cell><span dangerouslySetInnerHTML={{ __html: guess.correct }}></span></Table.Cell>
 											<Table.Cell>{guess.distance}</Table.Cell>
 										</Table.Row>
 									);

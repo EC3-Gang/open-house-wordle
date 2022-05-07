@@ -2,7 +2,8 @@
 * Calculates the haversine distance between point A, and B.
 * @param {number[]} latlngA [lat, lng] point A
 * @param {number[]} latlngB [lat, lng] point B
-* @param {boolean} isMiles whether to use miles or km
+* @param {boolean} [isMiles=false] whether to use miles or km
+* @return {number} distance between A and B
 */
 
 export default ([lat1, lon1], [lat2, lon2], isMiles = false) => {

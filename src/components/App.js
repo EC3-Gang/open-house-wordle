@@ -64,6 +64,7 @@ class App extends Component {
 						<ul>
 							<li>Tey Yixiang (1i2)</li>
 							<li>Liang Weiyu (1A3)</li>
+							<li>Darryl Shi(1i2)</li>
 						</ul>
 						<p>The following people/organisations were the coordinators:</p>
 						<ul>

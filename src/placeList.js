@@ -51,8 +51,8 @@ export default [
 		text: 'Popular Bookstore',
 		key: 'bookstore',
 		value: 'Popular Bookstore',
-		lat: '1.36694',
-		long: '103.8480478',
+		lat: '1.3258598929682894',
+		long: '103.80236827129892',
 		url: 'https://kuula.co/share/NZlbJ?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',
 	},
 	{

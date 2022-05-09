@@ -72,11 +72,11 @@ export default [
 		url: 'https://kuula.co/share/NZlbd?logo=1&info=1&fs=1&vr=0&thumbs=1&alpha=0.60&keys=0',
 	},
 	{
-		text: 'Lecture Theatre (LT) 4',
+		text: 'Lecture Theatre (LT) 4', // 1.325819164345228, 103.80294400038422
 		key: 'lt4',
 		value: 'Lecture Theatre (LT) 4',
-		lat: '1.325974',
-		long: '103.732296',
+		lat: '1.325819164345228',
+		long: '103.80294400038422',
 		url: 'https://kuula.co/share/NZW0r?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',
 	},
 	{

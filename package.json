@@ -1,6 +1,6 @@
 {
 	"name": "open-house-wordle",
-	"version": "0.1.0",
+	"version": "0.8.4-beta.2",
 	"private": true,
 	"phase": "Testing",
 	"license": "MIT",

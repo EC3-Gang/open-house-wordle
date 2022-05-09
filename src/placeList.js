@@ -64,15 +64,15 @@ export default [
 		url: 'https://kuula.co/share/NZWGD?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',
 	},
 	{
-		text: 'Kah Kee Hall (KKH)',
+		text: 'Kah Kee Hall (KKH)', // 1.3256961254451456, 103.80283136233761
 		key: 'kkh',
 		value: 'Kah Kee Hall (KKH)',
-		lat: '1.3259612',
-		long: '103.8021591',
+		lat: '1.3256961254451456',
+		long: '103.80283136233761',
 		url: 'https://kuula.co/share/NZlbd?logo=1&info=1&fs=1&vr=0&thumbs=1&alpha=0.60&keys=0',
 	},
 	{
-		text: 'Lecture Theatre (LT) 4', // 1.325819164345228, 103.80294400038422
+		text: 'Lecture Theatre (LT) 4',
 		key: 'lt4',
 		value: 'Lecture Theatre (LT) 4',
 		lat: '1.325819164345228',

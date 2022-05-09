@@ -1,51 +1,54 @@
 {
-  "name": "open-house-wordle",
-  "version": "0.1.0",
-  "private": true,
+	"name": "open-house-wordle",
+	"version": "0.1.0",
+	"private": true,
+	"phase": "Testing",
 	"license": "MIT",
-  "dependencies": {
-    "@semantic-ui-react/css-patch": "^1.0.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "eslint-config-berry": "^0.15.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.1.2",
-    "sweetalert2": "^11.4.10",
-    "web-vitals": "^2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "postinstall": "semantic-ui-css-patch",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --fix ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "homepage": "./",
-  "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-plugin-react": "^7.29.4"
-  }
+	"dependencies": {
+		"@semantic-ui-react/css-patch": "^1.0.0",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^13.0.0",
+		"@testing-library/user-event": "^13.2.1",
+		"axios": "^0.27.2",
+		"eslint-config-berry": "^0.15.5",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"react-scripts": "5.0.1",
+		"semantic-ui-css": "^2.4.1",
+		"semantic-ui-react": "^2.1.2",
+		"sweetalert2": "^11.4.10",
+		"sweetalert2-react-content": "^5.0.0",
+		"web-vitals": "^2.1.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"postinstall": "semantic-ui-css-patch",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"lint": "eslint --fix ."
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"homepage": "./",
+	"devDependencies": {
+		"eslint": "^8.13.0",
+		"eslint-plugin-react": "^7.29.4"
+	}
 }

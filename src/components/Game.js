@@ -8,6 +8,7 @@ import places from '../placeList';
 import haversine from '../haversine';
 import Swal from 'sweetalert2';
 
+
 export default class Game extends Component {
 	constructor(props) {
 		super(props);

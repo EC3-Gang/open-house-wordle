@@ -41,6 +41,7 @@ class App extends Component {
 					<p>The aim of this game is to guess the correct place based on the 3d tour.</p>
 					<p>You will have to choose from a number of places to guess and will be given 4 chances.</p>
 					<p>If you guessed wrongly, you will be given a distance between the place you guess and the correct place.</p>
+					<p><a href='https://github.com/EC3-Gang/open-house-wordle/issues'>Issues/Report an issue here</a></p>
 				</>
 			),
 			confirmButtonText: 'Play Now',

@@ -1,56 +1,70 @@
 {
-	"name": "open-house-wordle",
-	"version": "0.8.4-beta.5",
-	"private": true,
-	"phase": "Testing",
-	"license": "MIT",
-	"dependencies": {
-		"@semantic-ui-react/css-patch": "^1.0.0",
-		"@sweetalert2/themes": "^5.0.10",
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/react": "^13.0.0",
-		"@testing-library/user-event": "^13.2.1",
-		"axios": "^0.27.2",
-		"eslint-config-berry": "^0.15.5",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
-		"react-scripts": "5.0.1",
-		"sass": "^1.51.0",
-		"semantic-ui-css": "^2.4.1",
-		"semantic-ui-react": "^2.1.2",
-		"sweetalert2": "^11.4.10",
-		"sweetalert2-react-content": "^5.0.0",
-		"web-vitals": "^2.1.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"postinstall": "semantic-ui-css-patch",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"lint": "eslint --fix ."
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"homepage": "./",
-	"devDependencies": {
-		"eslint": "^8.13.0",
-		"eslint-plugin-react": "^7.29.4"
-	}
+  "name": "open-house-wordle",
+  "version": "0.8.4-beta.5",
+  "description": "HCI 2022 Open House Worldle/Geoguesser",
+  "private": true,
+  "phase": "Testing",
+  "license": "MIT",
+  "dependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
+    "@semantic-ui-react/css-patch": "^1.0.0",
+    "@sweetalert2/themes": "^5.0.10",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.27.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "eslint-config-berry": "^0.15.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.51.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
+    "sweetalert2": "^11.4.10",
+    "sweetalert2-react-content": "^5.0.0",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "postinstall": "semantic-ui-css-patch",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "wb:wizard": "workbox wizard",
+    "wb:genSw": "workbox generateSW ./workbox-config.js",
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron-is-dev": "^2.0.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
+    "workbox-cli": "^6.5.3"
+  },
+  "config": {
+    "forge": "./forge.config.js"
+  }
 }

@@ -1,24 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "HCI Geoguesser",
+  "name": "2022 HCI Open House Geoguesser",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "256x256",
       "type": "image/x-icon"
     },
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "360x360"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "360x360"
     }
   ],
   "start_url": ".",
+	"id": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

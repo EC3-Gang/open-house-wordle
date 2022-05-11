@@ -87,4 +87,12 @@ export default [
 		long: '103.8031209',
 		url: 'https://kuula.co/share/NZWGN?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',
 	},
+	{
+		text: 'SALT Centre Foyer', // 1.3275473582054689, 103.801617726842
+		key: 'salt',
+		value: 'SALT Centre Foyer',
+		lat: '1.3275473582054689',
+		long: '103.801617726842',
+		url: 'https://kuula.co/share/N12NN?logo=1&info=1&fs=1&vr=0&thumbs=1&alpha=0.60&keys=0',
+	},
 ];

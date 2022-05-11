@@ -26,10 +26,10 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "craco start",
     "postinstall": "semantic-ui-css-patch",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "craco build",
+    "test": "craco test",
     "wb:wizard": "workbox wizard",
     "wb:genSw": "workbox generateSW ./workbox-config.js",
     "eject": "react-scripts eject",
@@ -55,10 +55,12 @@
   },
   "homepage": "./",
   "devDependencies": {
+    "@craco/craco": "^6.4.3",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "craco-esbuild": "^0.5.1",
     "electron-is-dev": "^2.0.0",
     "eslint": "^8.13.0",
     "eslint-plugin-react": "^7.29.4",

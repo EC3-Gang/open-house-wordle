@@ -1,9 +1,9 @@
-const { defineConfig, splitVendorChunkPlugin } = require('vite');
-const { VitePWA } = require('vite-plugin-pwa');
-const JSX = require('@vitejs/plugin-react');
-const compress = require('vite-plugin-compress');
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
+import JSX from '@vitejs/plugin-react';
+import compress from 'vite-plugin-compress';
 
-module.exports = defineConfig({
+export default defineConfig({
 	plugins: [
 		splitVendorChunkPlugin(),
 		VitePWA(),

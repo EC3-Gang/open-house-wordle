@@ -1,6 +1,6 @@
 import './App.css';
-import React, { Component, Suspense } from 'react';
-const Game = React.lazy(() => import('./Game'));
+import { Component, Suspense, lazy } from 'react';
+const Game = lazy(() => import('./Game'));
 // import { Icon } from 'semantic-ui-react';
 import placeList from '../placeList';
 import Swal2 from 'sweetalert2';

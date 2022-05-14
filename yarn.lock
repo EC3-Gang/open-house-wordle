@@ -10501,6 +10501,11 @@ vite-plugin-pwa@^0.12.0:
     workbox-build "^6.5.3"
     workbox-window "^6.5.3"
 
+vite-plugin-radar@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-radar/-/vite-plugin-radar-0.4.2.tgz#752967b9302bd5182d8ea528db241d392e100878"
+  integrity sha512-da1mm6nF47PAQyxaMQ7GQgLSgznR1uWnbz7J3mPHHSV9HUMx1ngn4MCB8Jppt/Xmdk99xA6s9z1m4+wJvPrvMQ==
+
 vite@^2.9.8:
   version "2.9.8"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.8.tgz#2c2cb0790beb0fbe4b8c0995b80fe691a91c2545"

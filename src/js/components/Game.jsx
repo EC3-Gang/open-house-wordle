@@ -61,6 +61,7 @@ export default class Game extends Component {
 					`,
 					icon: 'error',
 					confirmButtonText: 'Play Again',
+					allowOutsideClick: false,
 				}).then(({ isConfirmed }) => {
 					if (isConfirmed) location.reload();
 				});

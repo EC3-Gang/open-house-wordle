@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "description": "HCI 2022 Open House Worldle/Geoguesser",
   "private": true,
-  "phase": "Testing",
+  "phase": "Production",
   "license": "MIT",
   "dependencies": {
     "@electron-forge/publisher-github": "^6.0.0-beta.63",
@@ -58,7 +58,6 @@
     "eslint": "^8.13.0",
     "eslint-plugin-react": "^7.29.4",
     "vite-plugin-html": "^3.2.0",
-    "vite-plugin-pwa": "^0.12.0",
     "vite-plugin-radar": "^0.4.2"
   }
 }

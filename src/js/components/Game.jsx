@@ -6,8 +6,8 @@ import { Container, Button, Dropdown, Table, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import places from '../placeList';
 import haversine from '../haversine';
-import Swal from 'sweetalert2';
-import 'sweetalert2/src/sweetalert2.scss';
+import Swal from 'sweetalert2/src/sweetalert2.js';
+import '@sweetalert2/themes/borderless/borderless.scss';
 
 
 export default class Game extends Component {
@@ -36,7 +36,7 @@ export default class Game extends Component {
 			Swal.fire({
 				titleText: 'Congratulations!',
 				html: `
-					<p>You guessed the place correctly!</p>
+					<p class='center'>You guessed the place correctly!</p>
 				`,
 				icon: 'success',
 				confirmButtonText: 'Play Again',
@@ -56,8 +56,8 @@ export default class Game extends Component {
 				Swal.fire({
 					titleText: 'Oops...',
 					html: `
-						<p>You guessed the place incorrectly!</p>
-						<p>The correct place is ${correctPlace.text}</p>
+						<p class='center'>You guessed the place incorrectly!</p>
+						<p class='center'>The correct place is ${correctPlace.text}</p>
 					`,
 					icon: 'error',
 					confirmButtonText: 'Play Again',
@@ -70,7 +70,7 @@ export default class Game extends Component {
 				Swal.fire({
 					titleText: 'Oops...',
 					html: `
-						<p>You guessed the place incorrectly!</p>
+						<p class='center'>You guessed the place incorrectly!</p>
 					`,
 					icon: 'error',
 					confirmButtonText: 'Try Again',

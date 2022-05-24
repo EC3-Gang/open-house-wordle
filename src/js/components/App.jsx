@@ -7,6 +7,7 @@ import Swal2 from 'sweetalert2';
 import SwalReact from 'sweetalert2-react-content';
 const Swal = SwalReact(Swal2);
 import axios from 'axios';
+import '@sweetalert2/themes/borderless/borderless.scss';
 
 class App extends Component {
 	constructor(props) {
@@ -78,7 +79,7 @@ class App extends Component {
 					confirmButtonColor: '#21b500',
 				});
 			}
-			else if (res.isDismissed) {
+			else if (res.dismiss === Swal.DismissReason.cancel) {
 				Swal.fire({
 					titleText: 'Current Game Version',
 					html: (

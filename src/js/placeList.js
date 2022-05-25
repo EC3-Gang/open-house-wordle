@@ -40,7 +40,7 @@ export default [
 		url: 'https://kuula.co/share/NZW0W?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',
 	},
 	{
-		text: 'Multi-Purpose Hall (MPH)',
+		text: 'Multi-Purpose Hall (MPH) / Moot Parliament Hall',
 		key: 'hall',
 		value: 'Multi-Purpose Hall',
 		lat: '1.3274573',

@@ -8,6 +8,7 @@ import places from '../placeList';
 import haversine from '../haversine';
 import Swal from 'sweetalert2/src/sweetalert2.js';
 import '@sweetalert2/themes/borderless/borderless.scss';
+import Fuse from 'fuse.js';
 
 
 export default class Game extends Component {
@@ -80,6 +81,16 @@ export default class Game extends Component {
 		this.setState({ guesses: newGuesses });
 	};
 
+	customSearch = (options, query) => {
+		// fuzzy search options with query
+		const fuse = new Fuse(options, {
+			keys: ['text'],
+			threshold: 1,
+		});
+		const result = fuse.search(query);
+		return result.map(({ item }) => item);
+	};
+
 	render() {
 		return (
 			<Container style={{
@@ -90,7 +101,8 @@ export default class Game extends Component {
 					<iframe src={this.props.place.url} />
 					<Dropdown
 						placeholder='Guess a place'
-						fluid search selection options={this.places}
+						fluid search={this.customSearch}
+						selection options={this.places}
 						onChange={(e) => {
 							this.setState({ guess: e.target.innerText });
 						}}

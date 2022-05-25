@@ -103,8 +103,8 @@ export default class Game extends Component {
 						placeholder='Guess a place'
 						fluid search={this.customSearch}
 						selection options={this.places}
-						onChange={(e) => {
-							this.setState({ guess: e.target.innerText });
+						onChange={(_, { value }) => {
+							this.setState({ guess: value });
 						}}
 					/>
 					<Button className='center toppadded' color='blue' fluid onClick={this.handleGuess}>

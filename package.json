@@ -1,6 +1,6 @@
 {
   "name": "open-house-wordle",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "HCI 2022 Open House Worldle/Geoguesser",
   "private": true,
   "phase": "Production",

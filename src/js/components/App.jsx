@@ -8,6 +8,7 @@ import SwalReact from 'sweetalert2-react-content';
 const Swal = SwalReact(Swal2);
 import axios from 'axios';
 import '@sweetalert2/themes/borderless/borderless.scss';
+import packageJSON from '../../../package.json';
 
 class App extends Component {
 	constructor(props) {
@@ -23,7 +24,6 @@ class App extends Component {
 	componentDidMount = async () => {
 		console.log('Mounted');
 		try {
-			const packageJSON = (await axios.get('https://raw.githubusercontent.com/EC3-Gang/open-house-wordle/master/package.json')).data;
 			const version = packageJSON['version'];
 			const phase = packageJSON['phase'];
 			const contributors = (await axios.get('https://api.github.com/repos/EC3-Gang/open-house-wordle/contributors')).data;

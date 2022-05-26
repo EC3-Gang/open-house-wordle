@@ -104,6 +104,7 @@ export default class Game extends Component {
 						fluid search={this.customSearch}
 						selection options={this.places}
 						onChange={(_, { value }) => {
+							console.log(value);
 							this.setState({ guess: value });
 						}}
 					/>

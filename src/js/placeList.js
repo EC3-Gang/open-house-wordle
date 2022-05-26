@@ -4,7 +4,7 @@ export default [
 		key: 'library',
 		lat: '1.3263268',
 		long: '103.803345',
-		value: 'KC Library Foyer',
+		value: 'Kong Chian Library Foyer',
 		url: 'https://kuula.co/share/NKB5J?logo=1&info=1&fs=1&vr=0&thumbs=1&alpha=0.60',
 	},
 	{
@@ -42,7 +42,7 @@ export default [
 	{
 		text: 'Multi-Purpose Hall (MPH) / Moot Parliament Hall',
 		key: 'hall',
-		value: 'Multi-Purpose Hall',
+		value: 'Multi-Purpose Hall (MPH) / Moot Parliament Hall',
 		lat: '1.3274573',
 		long: '103.8015080',
 		url: 'https://kuula.co/share/NZWGG?logo=0&info=1&fs=1&vr=0&sd=1&thumbs=1',

@@ -26,7 +26,7 @@
     "serve": "^13.0.2",
     "sweetalert2": "^11.4.10",
     "sweetalert2-react-content": "^5.0.0",
-    "vite": "^2.9.8",
+    "vite": "^2.9.13",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
